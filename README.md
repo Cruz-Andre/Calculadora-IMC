@@ -1,1 +1,1 @@
-# Calculadora-IMC Projeto para por em prática conhecimentos adquiridos nos cursos da alura e alfamídia
+# Calculadora-IMC. Projeto para por em prática conhecimentos adquiridos nos cursos da Alura/Compass.Uol e AlfamídiaMaisPraTi
