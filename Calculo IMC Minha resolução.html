@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Calculadora de IMC</title>
+		<script>		
+			function calculaImc() {
+				var peso = document.getElementById("peso").value;
+				//peso = parseFloat(peso);
+				// console.log(peso, typeof(peso));
+				
+				var altura = document.getElementById("altura").value;
+				//altura = parseFloat(altura);
+				// console.log(altura, typeof(peso));
+
+				
+				let imc = peso / altura ** 2; // Cálculo do IMC -> peso dividido pela altura ao quadrado.
+				// console.log(imc, typeof(imc));
+				//alert('Seu indice de massa corporal: ' + imc.toFixed(2).replace(".",","));
+				document.getElementById("imc").innerHTML = "<p> seu indice de massa corporal: " + imc.toFixed(2).replace(".",",") + "</p>";
+
+				if (imc < 18.50) {
+					//alert('Magreza - Obesidade Grau 0 (zero)');
+					document.getElementById("resultado").innerHTML = "<p>Magreza - Obesidade Grau 0 (zero)</p>";
+				} else if (imc >= 18.50 && imc <= 24.99) {
+					//alert('Normal - Obesidade Grau 0 (zero)');
+					document.getElementById("resultado").innerHTML = "<p>Normal - Obesidade Grau 0 (zero)</p>";
+				} else if (imc >= 25.00 && imc <= 29.99) {
+					//alert('Sobrepeso - Obesidade Grau I (um)');
+					document.getElementById("resultado").innerHTML = "<p>Sobrepeso - Obesidade Grau I (um)</p>";
+				} else if (imc >= 30.00 && imc <= 39.99) {
+					//alert('Obesidade - Obesidade Grau II (dois)');
+					document.getElementById("resultado").innerHTML = "<p>Obesidade - Obesidade Grau II (dois)</p>";
+				} else {
+					//alert('Obesidade Grave - Obesidade Grau III (três)')
+					document.getElementById("resultado").innerHTML = "Obesidade Grave - Obesidade Grau III (três)";
+				}
+
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>Calculando o seu IMC</h1>	
+		</header>
+		<label for="peso">Digite Seu Peso</label>
+		<input type="number" id="peso" name="peso" value="0">
+		<label for="altura">Digite Sua Altura</label>
+		<input type="number" id="altura" name="altura" value="" placeholder="ex: 1.81">
+		<input type="button" onclick="calculaImc()" value="Calcule" id="calcule">
+		<p id="imc"></p>
+		<p id="resultado"></p>
+	</body>
+</html>
