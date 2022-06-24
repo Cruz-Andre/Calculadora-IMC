@@ -6,7 +6,7 @@ function calculaImc() {
     // Cálculo do IMC -> peso dividido pela altura ao quadrado.
     let imc = peso / altura ** 2;
     
-    document.getElementById("imc").innerHTML = "seu indice de massa corporal: " + imc.toFixed(2).replace(".",",");
+    document.getElementById("imc").innerHTML = "Seu indice de massa corporal: " + imc.toFixed(2).replace(".",",");
 
     if (imc < 18.50) {
         document.getElementById("resultado").innerHTML = "Magreza - Obesidade Grau 0 (zero)";

@@ -1,4 +1,8 @@
-h1 {
+* {
+    font-family: 'Open Sans', sans-serif;
+
+}
+.cabecalho__titulo {
     font-size: 22px;
     text-align: center;
     font-weight: bold;
@@ -6,6 +10,16 @@ h1 {
 }
 
 .pesoAltura {
-    padding: 0% 0% 0% 10%;
+    text-align: center;
+    margin: 0 auto;
 
+}
+
+.resultado {
+    margin: 1% auto;
+    text-align: center;
+}
+
+.resultado__imc {
+    margin-bottom: 1%;
 }
