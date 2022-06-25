@@ -23,5 +23,6 @@ function calculaImc() {
     else {
         document.getElementById("resultado").innerHTML = "Obesidade Grave - Obesidade Grau III (três)";
     }
-
+    
+    
 }

@@ -9,17 +9,44 @@
     margin: 1% 1% 2% 1%;
 }
 
-.pesoAltura {
-    text-align: center;
-    margin: 0 auto;
+.peso-altura {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem;
+    border: 2px solid black;
+    font-weight: bold;
+}
 
+.peso-altura__label, .peso-altura__botao {
+    margin: 0.5rem 0 0.5rem 0;
+    align-self: center;
+}
+
+.peso-altura__input {
+    align-self: center;
+    height: 2.375rem;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border-radius: 5px;
 }
 
 .resultado {
     margin: 1% auto;
     text-align: center;
+    border: 2px solid black;
+    margin: 1rem 1rem;
 }
 
-.resultado__imc {
-    margin-bottom: 1%;
+.resultado__imc, .resultado__tipo {
+    margin: 1rem 2rem;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .peso-altura {
+        width: 360px;
+        margin: 0 auto;     
+    }
+    
 }
